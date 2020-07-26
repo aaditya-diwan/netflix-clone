@@ -3,7 +3,7 @@ import axios from './axios'
 import './Row.css'
 const baseImageUrl = "https://image.tmdb.org/t/p/original/"
 
-function Row({title, fetchUrl}) {
+function Row({title, fetchUrl, isLargeRow}) {
     const [movies, setMovies] = useState([]);
 
     // A snipet of code which runs based on a specific condtion /variable
@@ -18,7 +18,6 @@ function Row({title, fetchUrl}) {
         fetchData();
     }, [fetchUrl]);
     
-    console.table(movies);
     return (
         <div className = "row">
             {/** TITLE*/}
@@ -28,8 +27,9 @@ function Row({title, fetchUrl}) {
             {/** SEVERAL ROW POSTERS */}
             {movies.map(movie =>(
                 <img
-                    className = "row__poster" 
-                    src = {`${baseImageUrl}${movie.poster_path}`} alt = {movie.name}
+                    key = {movie.id} 
+                    className = {`row__poster ${isLargeRow && "row__posterLarge"} `}
+                    src = {`${baseImageUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} alt = {movie.name}
                 />
                 ))}
             </div>
