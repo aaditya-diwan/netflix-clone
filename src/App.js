@@ -10,7 +10,7 @@ function App() {
     {/**  NAVBAR*/}
 
     {/**BANNER */}
-      <Banner />
+    <Banner />
     {/** ROWS */}
       <Row title = "NETFLIX ORIGINALS" fetchUrl = {requests.fetchNetflixOriginals} isLargeRow ={true}> </Row>
       <Row title = "TRENDING" fetchUrl = {requests.fetchTrending}> </Row>
