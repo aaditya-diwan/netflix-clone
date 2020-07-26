@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+DEPLOYMENT-LINK -> https://netflix-clone-543fc.web.app/
+
+A Simple Netflix Frontend Clone using ReactJs and Firebase for deployment.
+WHAT IT DOES - 
+1) Uses the TMDB api to fetch movie categories and other related data.
+2) Elegantly arranges it in the form of rows as in Netflix.
+3) Shows the trailer of movies whicih link is available on Youtube.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
